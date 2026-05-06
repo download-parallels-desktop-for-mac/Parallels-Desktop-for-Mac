@@ -176,6 +176,8 @@ This improves usability on MacBooks.
 
 Parallels Desktop provides a clean and beginner-friendly interface.
 
+<img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://www.parallels.com/static/pl/fileadmin/res/img/pd/2024/std/pd20-popup-home-2.png" width="725" height="439">
+
 Main sections include:
 
 | Section | Purpose |
